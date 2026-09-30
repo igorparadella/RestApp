@@ -60,39 +60,11 @@
 
 # 
 
-# Com o passar do tempo, o consumo de memória pode aumentar cada vez mais:
+# Com o passar do tempo, o consumo de memória pode aumentar cada vez mais.
 
 # 
 
-# &#x20;   Aplicativo inicia
-
-# &#x20;         ↓
-
-# &#x20;   Memória utilizada
-
-# &#x20;         ↓
-
-# &#x20;   Memória aumenta
-
-# &#x20;         ↓
-
-# &#x20;   Memória aumenta novamente
-
-# &#x20;         ↓
-
-# &#x20;   Aplicativo começa a apresentar problemas
-
-# &#x20;         ↓
-
-# &#x20;   RestApp encerra o processo
-
-# &#x20;         ↓
-
-# &#x20;   Memória é liberada
-
-# &#x20;         ↓
-
-# &#x20;   Aplicativo é iniciado novamente
+# \*\*Aplicativo inicia → Memória utilizada → Memória aumenta → Aplicativo apresenta problemas → RestApp encerra o processo → Memória é liberada → Aplicativo é iniciado novamente\*\*
 
 # 
 
@@ -128,7 +100,7 @@
 
 # 
 
-# Durante o desenvolvimento e os testes, o Godot Engine foi utilizado como exemplo para testar o mecanismo de encerramento e reinicialização de processos.
+# Durante o desenvolvimento e os testes, o Godot Engine foi utilizado apenas como exemplo para testar o mecanismo de encerramento e reinicialização de processos.
 
 # 
 
@@ -144,37 +116,11 @@
 
 # 
 
-# &#x20;   RestApp/
+# \* `RestApp.bat` — Script responsável por encerrar e iniciar novamente o aplicativo.
 
-# &#x20;   ├── RestApp.bat
+# \* `RestApp.ico` — Ícone utilizado pelo RestApp.
 
-# &#x20;   ├── RestApp.ico
-
-# &#x20;   └── README.md
-
-# 
-
-# \### RestApp.bat
-
-# 
-
-# Contém a lógica responsável por localizar, encerrar e iniciar novamente o aplicativo.
-
-# 
-
-# \### RestApp.ico
-
-# 
-
-# Ícone utilizado para identificar visualmente o RestApp quando executado através de um executável ou atalho.
-
-# 
-
-# \### README.md
-
-# 
-
-# Documentação do projeto.
+# \* `README.md` — Documentação do projeto.
 
 # 
 
@@ -182,11 +128,11 @@
 
 # 
 
-# \- Windows
+# \* Windows
 
-# \- Permissão para encerrar e iniciar o aplicativo configurado
+# \* Permissão para encerrar e iniciar o aplicativo configurado
 
-# \- Caminho correto do executável do aplicativo
+# \* Caminho correto do executável do aplicativo
 
 # 
 
@@ -202,13 +148,13 @@
 
 # 
 
-# \- Nome correto do processo.
+# \* Nome correto do processo.
 
-# \- Caminho correto do executável.
+# \* Caminho correto do executável.
 
-# \- Permissões necessárias.
+# \* Permissões necessárias.
 
-# \- Se o aplicativo pode ser encerrado sem perda de dados.
+# \* Se o aplicativo pode ser encerrado sem perda de dados.
 
 # 
 
@@ -217,4 +163,6 @@
 # 
 
 # O objetivo do RestApp é fornecer uma maneira simples e rápida de recuperar um aplicativo que apresenta problemas devido ao consumo excessivo de memória, evitando a necessidade de reiniciar todo o computador.
+
+
 
