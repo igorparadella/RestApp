@@ -1,100 +1,88 @@
-# \# RestApp
+# RestApp
 
-# 
+**Ferramenta simples para reiniciar aplicativos que apresentam problemas relacionados ao consumo excessivo de memória.**
 
-# \*\*Ferramenta simples para reiniciar aplicativos que apresentam problemas relacionados ao consumo excessivo de memória.\*\*
+O **RestApp** foi criado para solucionar uma situação encontrada em um sistema utilizado em uma cafeteria, onde o aplicativo apresentava problemas após permanecer muito tempo em execução devido ao alto consumo de memória.
 
-# 
+Em vez de reiniciar o computador inteiro, o RestApp encerra o aplicativo e inicia uma nova instância, permitindo recuperar seu funcionamento rapidamente.
 
-# O \*\*RestApp\*\* foi criado para solucionar uma situação encontrada em um sistema utilizado em uma cafeteria, onde o aplicativo apresentava problemas após permanecer muito tempo em execução devido ao alto consumo de memória.
+---
 
-# 
+## 🔄 Como funciona
 
-# Em vez de reiniciar o computador inteiro, o RestApp encerra o aplicativo e inicia uma nova instância, permitindo recuperar seu funcionamento rapidamente.
+O processo é simples:
 
-# 
+1. 🛑 Encerra o aplicativo configurado.
+2. 🧹 Libera os recursos utilizados pelo processo.
+3. 🚀 Inicia o aplicativo novamente.
 
-# \---
+Dessa forma, é possível recuperar rapidamente o funcionamento do aplicativo sem precisar reiniciar o computador inteiro.
 
-# 
+---
 
-# \## 🔄 Como funciona
+## 🎯 Objetivo
 
-# 
+O **RestApp não corrige o vazamento de memória** ou outros problemas internos do aplicativo original.
 
-# \* 🛑 Encerra o aplicativo configurado.
+Ele funciona como uma solução prática para recuperar o funcionamento do sistema quando esses problemas acontecem.
 
-# \* 🧹 Libera a memória utilizada pelo processo.
+A ferramenta pode ser especialmente útil em computadores que precisam permanecer ligados por longos períodos.
 
-# \* 🚀 Inicia o aplicativo novamente.
+---
 
-# 
+## 🎮 Desenvolvimento
 
-# O objetivo é realizar a recuperação do aplicativo de forma rápida e simples, sem precisar reiniciar o computador.
+Durante o desenvolvimento, o **Godot Engine** foi utilizado apenas como aplicativo de teste para validar o funcionamento da ferramenta.
 
-# 
+O RestApp **não é específico para o Godot** e pode ser configurado para reiniciar diferentes aplicativos.
 
-# \---
+---
 
-# 
+## 📁 Estrutura do projeto
 
-# \## 🎯 Objetivo
+```text
+RestApp/
+├── RestApp.bat
+├── RestApp.ico
+└── README.md
+```
 
-# 
+### Arquivos
 
-# O RestApp \*\*não corrige o vazamento de memória\*\* do aplicativo original.
+* `RestApp.bat` — Script responsável por encerrar e iniciar novamente o aplicativo configurado.
+* `RestApp.ico` — Ícone utilizado pelo projeto.
+* `README.md` — Documentação do projeto.
 
-# 
+---
 
-# Ele funciona como uma solução prática para recuperar o sistema quando o problema ocorre.
+## ⚙️ Configuração
 
-# 
+O aplicativo que será reiniciado pode ser definido diretamente no arquivo:
 
-# \---
+```text
+RestApp.bat
+```
 
-# 
+Basta configurar o caminho e o processo correspondente ao aplicativo desejado.
 
-# \## 🎮 Desenvolvimento
+---
 
-# 
+## 💡 Exemplo de uso
 
-# Durante o desenvolvimento, o \*\*Godot Engine\*\* foi utilizado apenas como aplicativo de teste para validar o funcionamento da ferramenta.
+O RestApp pode ser utilizado em situações onde um aplicativo permanece funcionando durante muitas horas e começa a apresentar lentidão ou problemas relacionados ao consumo de memória.
 
-# 
+Em vez de reiniciar todo o computador, o usuário pode executar o RestApp para reiniciar somente o aplicativo afetado.
 
-# O RestApp não é específico para o Godot e pode ser configurado para outros aplicativos.
+---
 
-# 
+## 📌 Status
 
-# \---
+**Em desenvolvimento.**
 
-# 
+O projeto foi criado inicialmente para uso interno e poderá receber melhorias e novos recursos futuramente.
 
-# \## 📁 Estrutura
+---
 
-# 
+## 📄 Licença
 
-# \* `RestApp.bat` — Script responsável pela reinicialização.
-
-# \* `RestApp.ico` — Ícone do projeto.
-
-# \* `README.md` — Documentação.
-
-# 
-
-# \---
-
-# 
-
-# \## 📌 Status
-
-# 
-
-# \*\*Em desenvolvimento.\*\*
-
-# 
-
-# Ferramenta criada para uso interno e sujeita a melhorias futuras.
-
-
-
+Este projeto ainda não possui uma licença definida.
