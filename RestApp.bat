@@ -1,113 +1,120 @@
 @echo off
 setlocal EnableExtensions EnableDelayedExpansion
 
-title Reiniciador do Godot
+title Reiniciador de Aplicativo
+
+:: ========================================
+:: CONFIGURAÇÃO
+:: ========================================
 
 set "PROCESSO=Godot_v4.7.2-stable_win64.exe"
 set "APLICATIVO=C:\Users\igork\Apps\Godot\Godot_v4.7.2-stable_win64.exe"
 
-:: ========================================
-:: CONFIGURACAO
-:: ========================================
-
-:: true  = fecha o terminal automaticamente
-:: false = deixa o terminal aberto no final
+:: true  = fecha o terminal
+:: false = mantém o terminal aberto
 set "FECHAR_TERMINAL=true"
 
 
 echo.
 echo ========================================
-echo       REINICIANDO O GODOT
+echo        REINICIADOR DE APLICATIVO
 echo ========================================
 echo.
 
-echo Processo configurado:
-echo %PROCESSO%
+echo Processo: %PROCESSO%
+echo Aplicativo: %APLICATIVO%
 echo.
 
-echo Caminho configurado:
-echo %APLICATIVO%
-echo.
 
-echo ========================================
-echo 1 - VERIFICANDO PROCESSO
-echo ========================================
-echo.
+:: ========================================
+:: VERIFICAR SE O ARQUIVO EXISTE
+:: ========================================
 
-tasklist /FI "IMAGENAME eq %PROCESSO%" /NH
+if not exist "%APLICATIVO%" (
+    echo.
+    echo ERRO: aplicativo nao encontrado!
+    echo.
+    echo Caminho:
+    echo %APLICATIVO%
+    echo.
+    goto FIM
+)
 
-echo.
-echo ========================================
-echo 2 - ENCERRANDO PROCESSO
-echo ========================================
-echo.
 
-taskkill /F /IM "%PROCESSO%" /T
-
-echo.
-echo Codigo retornado pelo taskkill: %ERRORLEVEL%
-echo.
+:: ========================================
+:: ENCERRAR PROCESSO
+:: ========================================
 
 echo ========================================
-echo 3 - VERIFICANDO SE FOI ENCERRADO
+echo ENCERRANDO PROCESSO
 echo ========================================
 echo.
+
+taskkill /F /IM "%PROCESSO%" /T >nul 2>&1
+
+echo Processo encerrado.
+echo.
+
+
+:: ========================================
+:: AGUARDAR ENCERRAMENTO
+:: ========================================
+
+echo Aguardando encerramento completo...
 
 :VERIFICAR
 
 tasklist /FI "IMAGENAME eq %PROCESSO%" /NH | find /I "%PROCESSO%" >nul
 
 if not errorlevel 1 (
-    echo O processo ainda esta aberto.
-    echo Aguardando 1 segundo...
     timeout /t 1 /nobreak >nul
     goto VERIFICAR
 )
 
+echo Processo encerrado completamente.
 echo.
-echo PROCESSO NAO ESTA MAIS RODANDO!
-echo.
+
+
+:: ========================================
+:: INICIAR APLICATIVO
+:: ========================================
 
 echo ========================================
-echo 4 - ABRINDO NOVO GODOT
+echo INICIANDO APLICATIVO
 echo ========================================
 echo.
 
-if not exist "%APLICATIVO%" (
-    echo.
-    echo ERRO!
-    echo O arquivo nao foi encontrado:
-    echo %APLICATIVO%
-    echo.
-    goto FIM
-)
-
-echo Arquivo encontrado!
-echo Abrindo...
-
-start "" "%APLICATIVO%"
-
+echo Abrindo:
+echo %APLICATIVO%
 echo.
-echo Novo Godot iniciado.
+
+:: Cria um processo completamente separado
+start "" /B cmd /c start "" "%APLICATIVO%"
+
+echo Aplicativo iniciado.
 echo.
+
+
+:: ========================================
+:: FINAL
+:: ========================================
 
 echo ========================================
 echo       REINICIO CONCLUIDO
 echo ========================================
 echo.
 
-:FIM
-
 if /I "%FECHAR_TERMINAL%"=="true" (
-    timeout /t 2 /nobreak >nul
+    echo Fechando terminal...
+    timeout /t 1 /nobreak >nul
+    endlocal
     exit
 )
 
 echo.
-echo ----------------------------------------
-echo O SCRIPT TERMINOU.
+echo O script terminou.
 echo Pressione qualquer tecla para fechar.
-echo ----------------------------------------
 pause
 
 endlocal
+exit
