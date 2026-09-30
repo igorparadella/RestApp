@@ -2,167 +2,99 @@
 
 # 
 
-# O RestApp é uma ferramenta desenvolvida para auxiliar na recuperação de um sistema utilizado em uma cafeteria quando ocorre consumo excessivo de memória.
+# \*\*Ferramenta simples para reiniciar aplicativos que apresentam problemas relacionados ao consumo excessivo de memória.\*\*
 
 # 
 
-# \## Sobre o projeto
+# O \*\*RestApp\*\* foi criado para solucionar uma situação encontrada em um sistema utilizado em uma cafeteria, onde o aplicativo apresentava problemas após permanecer muito tempo em execução devido ao alto consumo de memória.
 
 # 
 
-# O sistema utilizado na cafeteria pode apresentar problemas após permanecer em execução por longos períodos, devido ao acúmulo excessivo de memória causado por um possível vazamento de memória no próprio aplicativo.
+# Em vez de reiniciar o computador inteiro, o RestApp encerra o aplicativo e inicia uma nova instância, permitindo recuperar seu funcionamento rapidamente.
 
 # 
 
-# Quando isso acontece, algumas funções podem parar de funcionar corretamente e apresentar erros relacionados à falta de memória.
+# \---
 
 # 
 
-# O RestApp foi criado para evitar a necessidade de reiniciar o computador inteiro nesses casos.
+# \## 🔄 Como funciona
 
 # 
 
-# \## Como funciona
+# \* 🛑 Encerra o aplicativo configurado.
+
+# \* 🧹 Libera a memória utilizada pelo processo.
+
+# \* 🚀 Inicia o aplicativo novamente.
 
 # 
 
-# O RestApp encerra completamente o processo do aplicativo e, em seguida, inicia o aplicativo novamente.
+# O objetivo é realizar a recuperação do aplicativo de forma rápida e simples, sem precisar reiniciar o computador.
 
 # 
 
-# O processo funciona da seguinte maneira:
+# \---
 
 # 
 
-# 1\. Verifica se o aplicativo está em execução.
-
-# 2\. Encerra o processo do aplicativo.
-
-# 3\. Aguarda o encerramento do processo.
-
-# 4\. Inicia o aplicativo novamente.
+# \## 🎯 Objetivo
 
 # 
 
-# Ao encerrar completamente o processo, a memória utilizada anteriormente pelo aplicativo é liberada pelo Windows.
+# O RestApp \*\*não corrige o vazamento de memória\*\* do aplicativo original.
 
 # 
 
-# \## Por que isso resolve o problema?
+# Ele funciona como uma solução prática para recuperar o sistema quando o problema ocorre.
 
 # 
 
-# O problema original está relacionado a um possível vazamento de memória.
+# \---
 
 # 
 
-# Um vazamento de memória acontece quando um programa utiliza memória RAM, mas não libera corretamente determinados recursos após utilizá-los.
+# \## 🎮 Desenvolvimento
 
 # 
 
-# Com o passar do tempo, o consumo de memória pode aumentar cada vez mais.
+# Durante o desenvolvimento, o \*\*Godot Engine\*\* foi utilizado apenas como aplicativo de teste para validar o funcionamento da ferramenta.
 
 # 
 
-# \*\*Aplicativo inicia → Memória utilizada → Memória aumenta → Aplicativo apresenta problemas → RestApp encerra o processo → Memória é liberada → Aplicativo é iniciado novamente\*\*
+# O RestApp não é específico para o Godot e pode ser configurado para outros aplicativos.
 
 # 
 
-# \## Importante
+# \---
 
 # 
 
-# O RestApp não corrige o vazamento de memória existente no aplicativo.
+# \## 📁 Estrutura
 
 # 
 
-# Ele funciona como uma solução operacional para recuperar o funcionamento do sistema sem precisar reiniciar o computador inteiro.
+# \* `RestApp.bat` — Script responsável pela reinicialização.
+
+# \* `RestApp.ico` — Ícone do projeto.
+
+# \* `README.md` — Documentação.
 
 # 
 
-# A correção definitiva do problema exigiria identificar e corrigir o vazamento diretamente no código-fonte do aplicativo original.
+# \---
 
 # 
 
-# \## Uso
+# \## 📌 Status
 
 # 
 
-# O RestApp foi desenvolvido para o ambiente da cafeteria, onde o aplicativo pode permanecer aberto durante longos períodos e eventualmente apresentar problemas relacionados ao consumo de memória.
+# \*\*Em desenvolvimento.\*\*
 
 # 
 
-# Em vez de reiniciar o computador, o usuário pode executar o RestApp para reiniciar somente o aplicativo afetado.
-
-# 
-
-# \## Godot
-
-# 
-
-# Durante o desenvolvimento e os testes, o Godot Engine foi utilizado apenas como exemplo para testar o mecanismo de encerramento e reinicialização de processos.
-
-# 
-
-# O RestApp não foi desenvolvido especificamente para o Godot.
-
-# 
-
-# O mecanismo pode ser utilizado com outros aplicativos, desde que o processo e o caminho do executável sejam configurados corretamente.
-
-# 
-
-# \## Estrutura
-
-# 
-
-# \* `RestApp.bat` — Script responsável por encerrar e iniciar novamente o aplicativo.
-
-# \* `RestApp.ico` — Ícone utilizado pelo RestApp.
-
-# \* `README.md` — Documentação do projeto.
-
-# 
-
-# \## Requisitos
-
-# 
-
-# \* Windows
-
-# \* Permissão para encerrar e iniciar o aplicativo configurado
-
-# \* Caminho correto do executável do aplicativo
-
-# 
-
-# \## Aviso
-
-# 
-
-# O RestApp deve ser configurado especificamente para o aplicativo que será reiniciado.
-
-# 
-
-# Antes de utilizar a ferramenta, confirme:
-
-# 
-
-# \* Nome correto do processo.
-
-# \* Caminho correto do executável.
-
-# \* Permissões necessárias.
-
-# \* Se o aplicativo pode ser encerrado sem perda de dados.
-
-# 
-
-# \## Objetivo
-
-# 
-
-# O objetivo do RestApp é fornecer uma maneira simples e rápida de recuperar um aplicativo que apresenta problemas devido ao consumo excessivo de memória, evitando a necessidade de reiniciar todo o computador.
+# Ferramenta criada para uso interno e sujeita a melhorias futuras.
 
 
 
