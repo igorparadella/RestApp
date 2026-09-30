@@ -30,14 +30,6 @@ A ferramenta pode ser especialmente útil em computadores que precisam permanece
 
 ---
 
-## 🎮 Desenvolvimento
-
-Durante o desenvolvimento, o **Godot Engine** foi utilizado apenas como aplicativo de teste para validar o funcionamento da ferramenta.
-
-O RestApp **não é específico para o Godot** e pode ser configurado para reiniciar diferentes aplicativos.
-
----
-
 ## 📁 Estrutura do projeto
 
 ```text
@@ -80,9 +72,3 @@ Em vez de reiniciar todo o computador, o usuário pode executar o RestApp para r
 **Em desenvolvimento.**
 
 O projeto foi criado inicialmente para uso interno e poderá receber melhorias e novos recursos futuramente.
-
----
-
-## 📄 Licença
-
-Este projeto ainda não possui uma licença definida.
